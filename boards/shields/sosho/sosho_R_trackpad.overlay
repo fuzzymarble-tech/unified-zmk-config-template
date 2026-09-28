@@ -52,5 +52,5 @@ https://zmk.dev/docs/keymaps/input-processors
 	・縦スクロールだけにしたいなら、先頭に <&zip_x_scaler 0 1>, を足す
 	*/
 	input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-	                   <&zip_xy_scaler 1 6>, <&zip_xy_to_scroll_mapper>;
+	                   <&zip_xy_scaler 1 18>, <&zip_xy_to_scroll_mapper>;
 };
