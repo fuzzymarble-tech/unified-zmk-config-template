@@ -123,12 +123,22 @@ keymap {
             &trans &trans &trans &trans    &trans    &trans      &trans  &trans  &trans     &trans     &trans     &trans
             &trans &trans &trans &mo 5     &trans    &trans      &trans  &trans  &trans     &trans     &trans     &trans
             &trans &trans &trans &trans    &trans    &trans      &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
-            &trans &trans                  &mkp RCLK &mkp LCLK   &trans  &trans                        &trans     &trans
+            &trans &trans                  &mkp LCLK &mkp RCLK   &trans  &trans                        &mo 6      &trans
         >;
     };
 
 	//高速ポインタ: マウスレイヤーで D を押している間だけ有効(速さは sosho_R_trackpad.overlay で設定)
     fast_layer {
+        bindings = <
+            &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+            &trans &trans               &trans &trans      &trans &trans               &trans &trans
+        >;
+    };
+
+	//高速ポインタ2: マウスレイヤーで右クリックの下(位置42)を押している間だけ有効
+    fast2_layer {
         bindings = <
             &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
