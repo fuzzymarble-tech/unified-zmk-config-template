@@ -21,7 +21,7 @@
             #sensor-binding-cells = <2>;
         };
 
-		//タップで文字、長押しで修飾キー(Z/V/M=Shift、C/,=Ctrl)
+		//タップで文字、長押しで修飾キー(Z/V/M=Shift、C/,=Ctrl、X=Alt)
 		//打鍵中(直前150ms以内にキー入力あり)は必ず文字になる
         hm: tap_hold_mod {
             compatible = "zmk,behavior-hold-tap";
@@ -60,7 +60,7 @@
             layers = <0>;
         };
 
-		//左下Ctrl(36)+右下Del(43) 同時押しで レイヤー3(Bluetooth)をオン、もう一度でオフ
+		//左下End(36)+右下Del(43) 同時押しで レイヤー3(Bluetooth)をオン、もう一度でオフ
         combo_BT {
             timeout-ms = <80>;
             key-positions = <36 43>;
@@ -78,8 +78,8 @@ keymap {
         bindings = <
             &kp ESC       &kp Q  &kp W          &kp E          &kp R  &kp T      &kp Y  &kp U          &kp I              &kp O    &kp P      &kp MINUS
             &kp TAB       &kp A  &kp S          &kp D          &kp F  &kp G      &kp H  &kp J          &kp K              &kp L    &kp SQT    &kp ENTER
-            &kp LSHFT     &hm LSHFT Z    &kp X  &hm LCTRL C    &hm LSHFT V    &kp B             &kp N  &hm RSHFT M    &hm RCTRL COMMA    &kp DOT  &kp LS(N8) &kp LS(N9)
-            &kp LCTRL     &kp LALT              &kp SPACE      &mo 1             &mo 2  &kp BSPC                          &kp INT_HENKAN &kp DEL
+            &kp HOME      &hm LSHFT Z    &hm LALT X  &hm LCTRL C    &hm LSHFT V    &kp B        &kp N  &hm RSHFT M    &hm RCTRL COMMA    &kp DOT  &kp LS(N8) &kp LS(N9)
+            &kp END       &kp LGUI              &kp SPACE      &mo 1             &mo 2  &kp BSPC                          &kp LALT &kp DEL
         >;
 		//&ec_ms_lとrは、上のビヘイビアで作ったもの。
         sensor-bindings = <&ec_ms_l SCRL_LEFT SCRL_RIGHT &ec_ms_r SCRL_DOWN SCRL_UP>;
