@@ -29,7 +29,12 @@ https://zmk.dev/docs/keymaps/input-processors
 */
 
 &spi1 { status = "okay"; };
-&trackball { status = "okay"; };
+//force-awake: キーボード使用中(ZMK が ACTIVE の間)はセンサーを省電力モードに落とさない
+//タイピング後にボールを動かしたとき反応が遅れる/拾わないのを防ぐ。放置して ZMK が IDLE になると通常の省電力に戻る
+&trackball {
+	status = "okay";
+	force-awake;
+};
 &trackball_listener {
 	status = "okay";
 	/*
